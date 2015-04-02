@@ -119,6 +119,15 @@ then
     pip install mercurial > /dev/null 2>&1
     echo " done"
 
+    echo -n "       Installing Bundler..."
+    gem install bundler > /dev/null 2>&1
+    echo " done"
+
+    echo -n "       Run bundle install..."
+    cd $build/mechanize-script
+    bundle install > /dev/null 2>&1
+    echo " done"
+
     echo -n "       Installing Bazaar..."
     pip install bzr > /dev/null 2>&1
     echo " done"
